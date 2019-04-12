@@ -1,0 +1,6 @@
+	: local infection and intialised according to <d> = p*memory*d. However, this leads to the issue of cumulative dose level being below the threshold even though it is infected intially. Thus as soon as the simulation starts,the infected individuals fall back. This is of no use and hence better initial conditions as follows can be thought of!
+winnie : should be initialising doses of 1 in random slots within the previous m time steps where m is the memory. d*+X divided into these random slots each of size 1
+pawel : should be d*+<d> where <d> = p*memory*d divided equally into previous m time steps. Unlike winnie, this is dependent on p and the dose size is not restricted to 1
+betterselc : making network neighbours infected instead of graphical neighbours
+
+check the function where doses are intialised to double check if it is doing as mentioned by one of the above 
